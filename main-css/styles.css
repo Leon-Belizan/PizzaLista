@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+.banner {
+    background-image: url(/img/GIQ4HYNCMVHGNIDPQ236S5QQJE.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.banner-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+span {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(251, 3, 3);
+    -webkit-text-stroke: 0.5px white;
+}
+
+.banner_h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(249, 247, 247);
+    -webkit-text-stroke: 1.5px rgb(255, 0, 0);
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+.glass-nav {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Colores del texto y links */
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.navbar-shadow{
+  text-shadow: 2px 2px 5px #000;
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* seccion de pizzas */
+
+.pizza-card {
+  cursor: pointer;
+}
+
+.pizza-card img {
+  transition: 0.3s ease-in-out;
+}
+
+.pizza-card .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+.pizza-card:hover img {
+  filter: brightness(70%);
+}
+
+.pizza-card:hover .overlay {
+  opacity: 1;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-img-top.big {
+  height: 520px;  
+  object-fit: cover;
+}
+.card {
+  position: relative;
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease; 
+}
+
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7); 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+/* efecto hover */
+.card:hover .card-img-top {
+  opacity: 1; 
+}
+
+.card:hover .card-overlay {
+  opacity: 1; 
+}
+
+.my-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.my-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+}
+.back-color{
+  background-color: #f8efe4;
+}
+.img-woman{
+  width: 60%;
+  height: 80vh;
+}
+
+.input-shadow{
+  border: none;
+  box-shadow: 2px 2px 5px black;
+}
+
+
+
+
+
+/***************mediaQueries***************/
+
+/*Tablets */
+@media (max-width: 992px) {
+  .banner {
+    height: 70vh;
+    background-position: center;
+        margin-top: 6.4rem;
+
+  }
+}
+
+/*Celulares*/
+@media (max-width: 576px) {
+  .banner {
+    height: 50vh;  
+    background-position: center;
+    margin-top: 6.4rem;
+  }
+}
+
+ section { position: relative; z-index: 1; }
+
+  /* Carousel multi-card */
+  #carouselPromos .carousel-item > div {
+    flex-wrap: wrap;
+  }
+
+  #carouselPromos .card {
+    min-height: 350px;
+  }
+
+  @media (min-width: 992px) {
+    #carouselPromos .carousel-item > div {
+      flex-wrap: nowrap;
+    }
+  }
+
+  /* Banner altura mínima */
+  .banner { min-height: 300px; }
+
+
+
+
+
